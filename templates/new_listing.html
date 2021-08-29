@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card my-3 col-6 mx-auto">
+
+  <h5 class="card-header">New Home</h5>
+  <div class="card-body">
+    <form action="/listings/new/post" enctype="multipart/form-data" method="post">
+        <div class="my-3 mx-5">
+            <h6 class="alert-warning text-center">Only verified landlords can list homes. If you would like to be added, contact the administrator.</h6>
+            <label for="renter" class="form-label">Renter ETH Address</label>
+            <input id="renter" name="renter" class="form-control" required>
+            <label for="streetAddress" class="form-label">Street Address</label>
+            <input id="streetAddress" name="streetAddress" class="form-control" required>
+            <label for="description" class="form-label">Description</label>
+            <input id="description" name="description" class="form-control" required>
+            <label for="homeRent" class="form-label">Rent Price (wei)</label>
+            <input id="homeRent" name="homeRent" class="form-control" type="number" required>
+            <label for="roomNum" class="form-label">Number Of Rooms</label>
+            <input id="roomNum" name="roomNum" class="form-control" type="number" required>
+            <label for="monthsToPay" class="form-label">Months To Pay</label>
+            <input id="monthsToPay" name="monthsToPay" class="form-control" type="number" required>
+            <label for="dateOfStart" class="form-label">Date Of Start</label>
+            <input id="dateOfStart" name="dateOfStart" class="form-control" required>
+            <label for="dateOfEnd" class="form-label">Date Of End</label>
+            <input id="dateOfEnd" name="dateOfEnd" class="form-control" required>
+            <label for="garage" class="form-label">Garage</label>
+            <input id="garage" name="garage" class="form-control" required>
+            <label for="elevator" class="form-label">Elevator</label>
+            <input id="elevator" name="elevator" class="form-control" required>
+            <label for="imageUrl" class="form-label">Image URL</label>
+            <input id="imageUrl" name="imageUrl" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary mx-5">Prepare Transaction</button>
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card my-3 col-6 mx-auto">
+
+  <h5 class="card-header"><i class="bi bi-cash-coin"></i> Pay Rent</h5>
+  <div class="card-body">
+    <form action="/rent/pay" enctype="multipart/form-data" method="post">
+        <div class="my-3 mx-5">
+            <label for="amount_wei" class="form-label">Rent Payment (wei)</label>
+            <input id="amount_wei" name="amount_wei" class="form-control" required>
+            <label for="landlord" class="form-label">Landlord's ETH Address</label>
+            <input id="landlord" name="landlord" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary mx-5">Pay Rent</button>
+    </form>
+  </div>
+  <h5 class="card-header"><i class="bi bi-currency-exchange"></i> wei to ETH calc</h5>
+  <div class="card-body">
+    <form action="/rent/calc" enctype="multipart/form-data" method="post">
+        <div class="my-3 mx-5">
+            <label for="amount_wei" class="form-label">wei</label>
+            <input id="amount_wei" name="amount_wei" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary mx-5">Calc</button>
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+    const ethereumButton = document.querySelector('.enableEthereumButton');
+    const showAccount = document.querySelector('.showAccount');
+
+    let accounts = [];
+
+    ethereumButton.addEventListener('click', () => {
+      getAccount();
+    });
+
+    async function getAccount() {
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+      const account = accounts[0];
+      showAccount.innerHTML = account;
+      document.getElementById('address').setAttribute("value", account);
+    }
+</script>
+
+{% endblock %}

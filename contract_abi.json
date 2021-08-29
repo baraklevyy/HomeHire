@@ -1,0 +1,295 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "Homes",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "renter",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "homeRent",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "roomNum",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "monthsToPay",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "dateOfStart",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "dateOfEnd",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "garage",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "elevator",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "Landlords",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_homeRent",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_monthsToPay",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "_renter",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "_dateOfStart",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_dateOfEnd",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_elevator",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_garage",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_roomNum",
+				"type": "uint256"
+			}
+		],
+		"name": "addHome",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_landlord",
+				"type": "address"
+			}
+		],
+		"name": "addLandlord",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_renter",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_newHomeRent",
+				"type": "uint256"
+			}
+		],
+		"name": "changeHomeRent",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_oldRenter",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_newRenter",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "_dateOfStart",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_dateOfEnd",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_monthsToPay",
+				"type": "uint256"
+			}
+		],
+		"name": "changeRenter",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_renter",
+				"type": "address"
+			}
+		],
+		"name": "deleteHome",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "deployer",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_renter",
+				"type": "address"
+			}
+		],
+		"name": "getHome",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address payable",
+				"name": "_to",
+				"type": "address"
+			}
+		],
+		"name": "payRent",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	}
+]

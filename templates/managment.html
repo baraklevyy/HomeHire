@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card my-3 col-6 mx-auto">
+
+  <h5 class="card-header"><i class="bi bi-check-circle"></i> Add Landlord</h5>
+  <div class="card-body">
+    <h6 class="alert alert-primary">Only administrator can add landlords.</h6>
+    <form action="/managment/add" enctype="multipart/form-data" method="post">
+      <div class="my-3 mx-5">
+          <label for="landlord" class="form-label">New Landlord ETH Address</label>
+          <input id="landlord" name="landlord" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary mx-5">Add</button>
+    </form>
+  </div>
+  <h5 class="card-header"><i class="bi bi-eraser-fill"></i> Delete Home</h5>
+  <div class="card-body">
+    <h6 class="alert alert-primary">Only administrator can delete home.</h6>
+    <form action="/managment/delete" enctype="multipart/form-data" method="post">
+      <div class="my-3 mx-5">
+          <label for="renter" class="form-label">Renter ETH Address</label>
+          <input id="renter" name="renter" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary mx-5">delete from contract</button>
+    </form>
+    <form action="/managment/deleteDB" enctype="multipart/form-data" method="post">
+      <div class="my-3 mx-5">
+          <label for="renter" class="form-label">Renter ETH Address</label>
+          <input id="renter" name="renter" class="form-control" required>
+          <label for="pwd" class="form-label">Password</label>
+          <input id="pwd" name="pwd" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary mx-5">delete from DB</button>
+    </form>
+  </div>
+  <h5 class="card-header"><i class="bi bi-people-fill"></i> Change Renter</h5>
+  <div class="card-body">
+    <h6 class="alert alert-primary">Only home landlord can change renter.</h6>
+    <form action="/managment/chngRenter" enctype="multipart/form-data" method="post">
+      <div class="my-3 mx-5">
+          <label for="oldRenter" class="form-label">Old Renter</label>
+          <input id="oldRenter" name="oldRenter" class="form-control" required>
+          <label for="newRenter" class="form-label">New Renter</label>
+          <input id="newRenter" name="newRenter" class="form-control" required>
+          <label for="dateOfStart" class="form-label">New Start Date</label>
+          <input id="dateOfStart" name="dateOfStart" class="form-control" required>
+          <label for="dateOfEnd" class="form-label">New End Date</label>
+          <input id="dateOfEnd" name="dateOfEnd" class="form-control" required>
+          <label for="monthsToPay" class="form-label">New Months To Pay</label>
+          <input id="monthsToPay" name="monthsToPay" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary mx-5">Change Renter</button>
+    </form>
+  </div>
+  <h5 class="card-header"><i class="bi bi-currency-dollar"></i> Change Rent Price</h5>
+  <div class="card-body">
+    <h6 class="alert alert-primary">Only home landlord can change rent price.</h6>
+    <form action="/managment/chngRent" enctype="multipart/form-data" method="post">
+      <div class="my-3 mx-5">
+          <label for="renter" class="form-label">Renter</label>
+          <input id="renter" name="renter" class="form-control" required>
+          <label for="newHomeRent" class="form-label">New Rent price</label>
+          <input id="newHomeRent" name="newHomeRent" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary mx-5">Change Rent Price</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
