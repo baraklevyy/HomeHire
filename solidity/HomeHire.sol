@@ -1,24 +1,3 @@
-
-השיחה נפתחה. הודעה אחת שלא נקראה.
-
-דילוג לתוכן
-שימוש ב-Gmail עם קוראי מסך
-Meet
-Hangouts
-
-1 מתוך 8,282
-contract‏‏
-דואר נכנס
-
-Barak Levy <baraklevyy@gmail.com‏>
-קבצים מצורפים
-20:25 ‎(לפני 0 דקות)‎
-אני
-
-
-
-	בלי וירוסים. www.avast.com
-2 קבצים מצורפים
 pragma solidity ^0.6.0;
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.0.0/contracts/math/SafeMath.sol";
 
@@ -128,5 +107,3 @@ contract HomeHire {
         return (home.renter, home.owner, home.homeRent, home.roomNum, home.monthsToPay, home.dateOfStart, home.dateOfEnd, home.garage, home.elevator);
     }
 }
-contract.txt
-מציג את contract.txt.
