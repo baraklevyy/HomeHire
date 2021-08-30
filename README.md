@@ -1,3 +1,3 @@
-##How to interact with the contract##
+##How to interact with the contract
 
 
